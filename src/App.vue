@@ -58,8 +58,8 @@ const fontArreglo = [
 
           <label>Tipografia</label>
           <!--TODO USAR CICLO V-FOR-->
-          <select v-model="letter" >
-            <option v-for="font in fontArreglo" :key="font" >{{ font }}</option>
+          <select v-model="letter">
+            <option v-for="font in fontArreglo" :key="font">{{ font }}</option>
           </select>
         </div>
         <!--Opaco-->
@@ -85,21 +85,23 @@ const fontArreglo = [
 
       </div>
 
-    </div>
+      <!--RESULTADO-->
 
-    <!--RESULTADO-->
-
-    <div class="col-md-6">
-      <div class="d-flex justify-content-center align-items-center " :class="{opacity: boxOpacity}" :style="{
-        backgroundColor: bColor,
-        color: tColor,
-        borderRadius: radius + 'px',
-      }" id="box">
-        <span v-show="showText">
-          <p :style="{ fontFamily: letter, fontSize: fontSize }">{{ wText }}</p>
-        </span>
+      <div class="col-md-6">
+        <div class="d-flex justify-content-center align-items-center " :class="{ opacity: boxOpacity }" :style="{
+          backgroundColor: bColor,
+          color: tColor,
+          borderRadius: radius + 'px',
+        }" id="box">
+          <span v-show="showText">
+            <p :style="{ fontFamily: letter, fontSize: fontSize }">{{ wText }}</p>
+          </span>
+        </div>
       </div>
+
     </div>
+
+
 
   </div>
 
